@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: url("index-wallpaper.png") top center;
+}
+
+
+.header {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 200%;
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: rgba(199, 84, 118, 0.4); 
+  color: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.15);
+  text-shadow:
+    -2px -1px 0 #ab3d6d,  
+     2px -1px 0 #ab3d6d,
+    -2px  1px 0 #ab3d6d,
+     2px  1px 0 #ab3d6d; 
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0 #00000055;
+}
+
+.site-header p {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  opacity: .9;
+}
+
+
+
+
+
+
+
+.bed-wrap{
+  display: flex;
+  justify-content: center;
+  padding: 16px;           
+}
+
+
+.bed {
+  position: relative;       
+  width: min(1000px, 92vw);
+  aspect-ratio: 2/3;     
+  background-size: contain;
+  background: url("background.JPG") no-repeat top center / cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.15);
+}
+
+/*COUSSINS*/
+
+.coussin {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform .12s ease;
+}
+
+.coussin:hover{
+  transform: scale(1.03);
+}
+
+.hotspot img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.coussin-c1 img {
+  width: 80%;    
+  height: auto;
+}
+
+.coussin-c2 img {
+  width: 80%;    
+  height: auto;
+}
+
+.coussin-c3 img {
+  width: 80%;    
+  height: auto;
+}
+
+.coussin-c4 img {
+  width: 80%;    
+  height: auto;
+}
+
+.coussin-c5 img {
+  width: 80%;    
+  height: auto;
+}
+
+.coussin-c1{ 
+  top: 23%;
+  left: 54%;
+  width: 30%;
+  transform: rotate(-15deg);
+  
+}
+
+.coussin-c2{ 
+  top: 62%;
+  left: 10%;
+  width: 30%;
+  transform: rotate(15deg);
+  
+}
+
+.coussin-c3{ 
+  top: 31%;
+  left: 10%;
+  width: 50%;
+  transform: rotate(-100deg);
+  
+}
+
+.coussin-c4{ 
+  top: 20%;
+  left: 1%;
+  width: 30%;
+  transform: rotate(-30deg);
+  
+}
+
+.coussin-c5{ 
+  top: -0.5%;
+  left: 22%;
+  width: 50%;  
+  transform: rotate(2deg)
+}
+
+
+/*FENETRES*/
+
+
+
+.modal::backdrop{
+  background: rgba(0,0,0,.45);
+}
+
+
+.modal{
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.modal-card{
+  position: relative;           
+  width: min(720px, 92vw);      
+  margin: 0;                    
+  padding: 11px 9px;           
+  background: url("wallpaper.jpg") center/cover no-repeat;           
+  color: #000000;                
+  border-radius: 40px;        
+  box-shadow: 0 20px 60px rgba(0,0,0,.35); 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 80vw;  
+  animation: zoomIn .3s ease;          
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+.modal-close{
+  position: absolute;          
+  top: 8px;
+  right: 12px;                  
+  background: transparent;     
+  border: 0;                 
+  font-size: 28px;            
+  cursor: pointer;             
+}
+
+
+.contact{
+  position:absolute;
+  bottom: 5%;
+  left:50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: rgba(90,33,56,0.6);
+  border-radius: 40px;
+  padding: 12px 14px;         
+  text-align:center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;              
+  flex-direction: column;
+  gap: 10px;                 
+}
+.contact p{
+  margin: 0;                  
+  color:#fff;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.contact .actions{
+  display:flex;          
+  justify-content: center;
+  gap: 10px 14px;           
+}
+
+.contact a{
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgb(172,51,99);  
+  color:#fff;
+  text-decoration:none;
+}
+
+@media (max-width: 480px) {
+  .contact {
+    bottom: 8px;
+    width: 90%;
+    padding: 6px 8px;
+    border-radius: 20px;
+    gap: 6px;
+  }
+  .contact h2 {
+    font-size: 0.65rem;  
+  }
+
+
+  .contact p {
+    font-size: 0.63rem;  
+  }
+
+  .contact a {
+    font-size: 0.6rem;   
+    padding: 4px 6px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 0.6rem;
+    text-shadow:
+    -1px -1px 0 #ab3d6d,  
+     1px -1px 0 #ab3d6d,
+    -1px  1px 0 #ab3d6d,
+     1px  1px 0 #ab3d6d; 
+     padding: 20px 20px 40px;
+  }
+}
